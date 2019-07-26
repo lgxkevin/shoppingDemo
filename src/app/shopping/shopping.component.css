@@ -1,0 +1,90 @@
+body {
+  color: #222222;
+}
+.headBackground {
+  background-color: #f6f6f7;
+  height:30px;
+  margin-left:120px;
+  margin-right:120px;
+}
+.fontColorGray {
+  color: #888888;
+}
+.fontColorBlack {
+  color: #222222;
+}
+.requiredStarColor {
+  color: #c90000;
+}
+.borderLightGray {
+  border: 1px solid #cccccc;
+}
+.borderDarkGray {
+  border: 1.5px solid #222222;
+}
+.fontSmall {
+  font-size: 13px;
+}
+.fontMedium {
+  font-size: 16px;
+}
+.fontBold {
+  font-weight: bold;
+}
+.teeImage {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+.sizeSelectionSquare {
+  display: inline-block;
+  height: 38px;
+  width: 38px;
+  margin-right: 10px;
+  padding-top:9px;
+  text-align: center;
+  cursor: pointer;
+}
+.selectedSizeSquare {
+  color: black;
+  border: 1px solid #222222;
+}
+button {
+  width: 150px;
+  height: 35px;
+  transition: all 0.2s ease;
+  color: #222222;
+  background-color: white;
+}
+button:hover {
+  color: white;
+  background-color: #222222;
+}
+.dropdownImg {
+  height: 80px;
+  width: 50px;
+}
+.dropdown-menu {
+  width: 300px;
+}
+.dropdown-toggle{
+  cursor: pointer;
+}
+.dropdown-toggle::after {
+  display:none;
+}
+.dropdown-item:hover {
+  background-color: transparent;
+}
+.headBackground span {
+  margin-right: 150px;
+}
+
+@media only screen and (max-width: 576px) {
+  .headBackground {
+    margin: 0px;
+  }
+  .headBackground span {
+    margin-right: 30px;
+  }
+}

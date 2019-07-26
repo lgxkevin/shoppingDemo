@@ -1,0 +1,35 @@
+  <div class= "headBackground py-1 mt-3">
+      <div class="float-right">
+        <span class="dropdown-toggle fontSmall fontColorGray" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (mouseover)="showCart()">
+            My cart ( {{quantityInCart}} )
+        </span>
+        <div class="dropdown-menu dropdown-menu-right">
+            <div class="row dropdown-item fontSmall" *ngFor="let item of carts">
+                <div class="col-4"><img class="dropdownImg" src="./assets/classic-tee.jpg"></div>
+                <div class="col-4">
+                    <span>{{item.title}}</span><br>
+                    <span>{{item.quantity}} x <b>$ {{item.price}}</b></span><br>
+                    <span>Size: {{item.sizeSelected}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+<div class="container">
+  <div class="row justify-content-md-center mt-4">
+      <div class="col-12 col-md-4 pr-1">
+          <img src="./assets/classic-tee.jpg" class="teeImage" alt="Classic Tee">
+      </div>
+      <div class="col-12 col-md-5 fontSmall pl-md-5 ml-md-5" *ngIf="displayedProduct">
+          <span class="fontMedium fontBold">{{displayedProduct.title}}</span> <br><br>
+          <b class="fontSmall fontBold">${{displayedProduct.price}}</b> <br><br>
+          <span class="fontColorGray">{{displayedProduct.description}}</span><br><br>
+          <span class="fontColorGray fontSmall fontBold">SIZE<span class="requiredStarColor">*</span></span>
+          <span *ngIf="selectedSize" class="fontBold"> {{selectedSize}} </span><br>
+          <span *ngIf="!isSizeSelected" class="requiredStarColor">Please choose size.</span><br>
+          <span *ngFor="let size of displayedProduct.sizeOptions" [ngClass]="{'fontColorBlack borderDarkGray': size===selectedSize}" class="sizeSelectionSquare borderLightGray fontColorGray" (click)="selectSize(size)">{{size}}</span>
+          <br><br>
+          <button class="borderDarkGray fontMedium fontBold" (click)="addToCart()">ADD TO CART</button>
+      </div>
+  </div>
+</div>
